@@ -8,6 +8,14 @@
                     <a href="#">
                         <img class="img-doc" src="https://penstagram.theowlclub.net/uploads/default/original/3X/6/e/6e0afb02d0a70cb90ca9b17584e9227fef0a47e0.jpeg" alt="">
                     </a>
+                    @foreach ($documents as $document)
+                    <div class="card text-white bg-light">
+                      <div class="card-body">
+                            <img class="img-doc" src="{{$document->url}}" alt="">
+                      </div>
+                    </div>
+                        
+                    @endforeach
                   </div>
                 </div>
             </div>
