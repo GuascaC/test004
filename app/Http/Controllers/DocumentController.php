@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Document;
+use App\Models\test004;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -38,7 +38,7 @@ class DocumentController extends Controller
     {
         $url = $request->file('file')->store('public/');
         $doc = Storage::url($url);
-        $document = new Document();
+        $document = new test004();
         $document -> url = $doc;
         $document -> save();
         return redirect(route('documents.index'));
